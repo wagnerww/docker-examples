@@ -1,4 +1,4 @@
-# Docker EXEMPLOS BÁSICOS E PRÁTICOS
+# Docker Exemplos Básicos e Práticos
 
 ## COMMANDS AND MORE
     - WORKDIR: Será o diretório inicial que o estarmos iniciando quando o container subir.

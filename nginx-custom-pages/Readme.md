@@ -1,16 +1,17 @@
 # NGINX CUSTOM PAGES
+Copy page from computer to container
 
 ## Check Steps
 
 ### Generate image:
-    docker build -t wagnerww/nginx-with-vim:latest .
+    docker build -t wagnerww/nginx-custom-pages:latest .
 
 ### Visualize image:
     docker images
 
-### Execute and enter in container:
-    docker run -it wagnerww/nginx-with-vim bash
+### Execute container:
+    docker run -t wagnerww/nginx-custom-pages
 
-#### Test your vim:
-    vim hello
-
+#### Test:
+    - Start in app folder
+    - verify file copy html in /usr/share/nginx/html
