@@ -5,4 +5,5 @@
     - COPY: Copia um diretório do nosso computador para dentro de um diretório específico do nosso container
         Ex: html /usr/share/nginx
     - ${PWD}: 
+    - docker logs container_name/id
 

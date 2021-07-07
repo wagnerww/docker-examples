@@ -12,7 +12,7 @@
 
 ### Execute and enter in container:
     docker images | grep laravel
-    docker run --rm --name laravel -p 8000:8000 wagnerww/laravel:prod
+    docker run --rm --name laravel-prod -p 8000:8000 wagnerww/laravel:prod
 
 #### Test:
 - Repare que a imagem de build, tageada com "prod" vai ter um terço da imagem normal "latest".
