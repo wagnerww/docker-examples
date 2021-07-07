@@ -1,0 +1,21 @@
+version: '3'
+
+services: 
+  laravel:
+    image: wagnerww/laravel:prod
+    container_name: laravel-prod
+    networks: 
+      - laranet
+  
+  nginx:
+    image: wagnerww/nginx-reverse-proxy:prod
+    container_name: nginx-prod
+    networks: 
+      - laranet
+    ports: 
+      - "8080:80"
+
+#Criar a rede interna para os containers utilizar e somente se enxergar  
+networks: 
+  laranet:
+    driver: bridge

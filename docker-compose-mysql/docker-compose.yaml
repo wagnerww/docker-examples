@@ -1,0 +1,20 @@
+version: '3'
+
+services: 
+  db:
+    image: mysql:5.7
+    command: --innodb-use-native-aio=0
+    container_name: db-mysql-compose
+    restart: always
+    tty: true
+    volumes: 
+      - ./mysql:/var/lib/mysql
+    environment: 
+      - MYSQL_DATABASE=nome_data_base
+      - MYSQL_ROOT_PASSWORD=root
+    networks: 
+      - mysql-network
+
+networks: 
+  mysql-network:
+    driver: bridge
